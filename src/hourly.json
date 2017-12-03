@@ -1,0 +1,182 @@
+[
+  {
+    "DateTime": "2017-11-25T04:00:00+02:00",
+    "EpochDateTime": 1511575200,
+    "WeatherIcon": 38,
+    "IconPhrase": "Mostly cloudy",
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 4.8,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 3,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=4&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T05:00:00+02:00",
+    "EpochDateTime": 1511578800,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 4.5,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 3,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=5&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T06:00:00+02:00",
+    "EpochDateTime": 1511582400,
+    "WeatherIcon": 36,
+    "IconPhrase": "Intermittent clouds",
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 4.3,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 2,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=6&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T07:00:00+02:00",
+    "EpochDateTime": 1511586000,
+    "WeatherIcon": 35,
+    "IconPhrase": "Partly cloudy",
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 3.4,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=7&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T08:00:00+02:00",
+    "EpochDateTime": 1511589600,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 4.3,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=8&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T09:00:00+02:00",
+    "EpochDateTime": 1511593200,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 5.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=9&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T10:00:00+02:00",
+    "EpochDateTime": 1511596800,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 6.4,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=10&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T11:00:00+02:00",
+    "EpochDateTime": 1511600400,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 7.3,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=11&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T12:00:00+02:00",
+    "EpochDateTime": 1511604000,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 8.2,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=12&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T13:00:00+02:00",
+    "EpochDateTime": 1511607600,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 9.0,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=13&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T14:00:00+02:00",
+    "EpochDateTime": 1511611200,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 9.9,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=14&unit=c"
+  },
+  {
+    "DateTime": "2017-11-25T15:00:00+02:00",
+    "EpochDateTime": 1511614800,
+    "WeatherIcon": 3,
+    "IconPhrase": "Partly sunny",
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 9.5,
+      "Unit": "C",
+      "UnitType": 17
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://m.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&unit=c",
+    "Link": "http://www.accuweather.com/en/ro/bucharest/287430/hourly-weather-forecast/287430?day=1&hbhhour=15&unit=c"
+  }
+]
