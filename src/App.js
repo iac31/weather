@@ -156,24 +156,24 @@ class App extends Component {
                         .then(() => {
                             const weather_api_key = 'w1gY3UgnKDweZNE4ZHwtAo3Go9RhUPIQ';
                             let cityName = this.state.geoJson.results[2].address_components[1].short_name;
-                            fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09${weather_api_key}&q=${cityName}`,
+                            fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09${weather_api_key}&q=${cityName}`,
                                 {method: 'GET'}
                             )
                                 .then(response => response.json())
                                 .then(json => this.setState({localWeatherKeyJson: json}))
                                 .then(() => {
                                     const weatherKey = this.state.localWeatherKeyJson[0].Key;
-                                    fetch(`http://dataservice.accuweather.com/currentconditions/v1/${weatherKey}?apikey=${weather_api_key}&details=true`,
+                                    fetch(`https://dataservice.accuweather.com/currentconditions/v1/${weatherKey}?apikey=${weather_api_key}&details=true`,
                                         {method: 'GET'}
                                     )
                                         .then(response => response.json())
                                         .then(json => this.setState({localCurrentWeather: json}));
-                                    fetch(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${weatherKey}?apikey=${weather_api_key}&language=en&metric=true`,
+                                    fetch(`https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${weatherKey}?apikey=${weather_api_key}&language=en&metric=true`,
                                         {method: 'GET'}
                                     )
                                         .then(response => response.json())
                                         .then(json => this.setState({hourlyForecast: json}));
-                                    fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${weatherKey}?apikey=${weather_api_key}&metric=true`,
+                                    fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${weatherKey}?apikey=${weather_api_key}&metric=true`,
                                         {method: 'GET'}
                                     )
                                         .then(response => response.json())
@@ -200,7 +200,7 @@ class App extends Component {
         const weather_api_key = 'w1gY3UgnKDweZNE4ZHwtAo3Go9RhUPIQ';
         if (e.target.value !== '' && e.key === 'Enter') {
             let cityName = e.target.value;
-            fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09${weather_api_key}&q=${cityName}`,
+            fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09${weather_api_key}&q=${cityName}`,
                 {method: 'GET'}
             )
                 .then(response => response.json())
@@ -214,17 +214,17 @@ class App extends Component {
                         });
                         const weather_api_key = 'w1gY3UgnKDweZNE4ZHwtAo3Go9RhUPIQ';
                         let searchKey = this.state.searchJson[0].Key;
-                        fetch(`http://dataservice.accuweather.com/currentconditions/v1/${searchKey}?apikey=${weather_api_key}&details=true`,
+                        fetch(`https://dataservice.accuweather.com/currentconditions/v1/${searchKey}?apikey=${weather_api_key}&details=true`,
                             {method: 'GET'}
                         )
                             .then(response => response.json())
                             .then(json => this.setState({localCurrentWeather: json}));
-                        fetch(`http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${searchKey}?apikey=${weather_api_key}&language=en&metric=true`,
+                        fetch(`https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${searchKey}?apikey=${weather_api_key}&language=en&metric=true`,
                             {method: 'GET'}
                         )
                             .then(response => response.json())
                             .then(json => this.setState({hourlyForecast: json}));
-                        fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${searchKey}?apikey=${weather_api_key}&metric=true`,
+                        fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${searchKey}?apikey=${weather_api_key}&metric=true`,
                             {method: 'GET'}
                         )
                             .then(response => response.json())

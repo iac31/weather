@@ -36,7 +36,7 @@ class Search extends Component {
                        onKeyPress={this.props.onSearch}/>
                 {this.props.gotResults === false ?
                     <p>No results</p> :
-                    <p>{this.props.searchJson[0].EnglishName} {this.props.searchJson[0].AdministrativeArea.ID} {this.props.searchJson[0].Country.EnglishName} {this.props.searchJson[0].Key}</p>
+                    null
                 }
             </div>
         );
