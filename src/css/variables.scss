@@ -1,0 +1,28 @@
+$font-family-sans-serif:
+  // Safari for OS X and iOS (San Francisco)
+        -apple-system,
+          // Chrome < 56 for OS X (San Francisco)
+        BlinkMacSystemFont,
+          // Windows
+        "Segoe UI",
+          // Android
+        "Roboto",
+          // Basic web fallback
+        "Helvetica Neue", Arial, sans-serif,
+          // Emoji fonts
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$maxWidth: 1200px;
+$pagePadding: 0 15px;
+$white: #FFFFFF;
+$black: #000000;
+$nephritis: #27ae60;
+$peterRiver: #3498db;
+$belizeHole: #2980b9;
+$sunFlower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$amethyst: #9b59b6;
+$clouds: #ecf0f1;
+$midnightBlue: #2c3e50;
