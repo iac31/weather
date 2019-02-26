@@ -34,11 +34,11 @@ import unknown from './icons/weather/unknown.svg';
 import chanceSleet from './icons/weather/chancesleet.svg';
 import chanceSnow from './icons/weather/chancesnow.svg';
 import chanceFlurries from './icons/weather/chanceflurries.svg';
-import hazy from './icons/weather/hazy.svg';
+import hazy from './icons/weather/hazy.svg';*/
 
 import current from './current.json';
 import hourly from './hourly.json';
-import daily from './daily.json';*/
+import daily from './daily.json';
 
 class App extends Component {
     constructor() {
@@ -58,82 +58,82 @@ class App extends Component {
                     },
                 }
             },
-            searchJson: [
-                {
-                    AdministrativeArea: {
-                        countryID: '',
-                        EnglishName: '',
-                        ID: ''
-                    },
-                    Key: '',
-                    Type: '',
-                    Country: {
-                        EnglishName: '',
-                        ID: ''
-                    },
-                    EnglishName: ''
-                }
-            ],
-            localWeatherKeyJson: [
-                {
-                    Key: ''
-                }
-            ],
-            localCurrentWeather: [
-                {
-                    EpochTime: '',
-                    ApparentTemperature: {
-                        Metric: {
-                            Value: ''
-                        }
-                    },
-                    WeatherIcon: '',
-                    Temperature: {
-                        Metric: {
-                            Value: ''
-                        }
-                    },
-                    RealFeelTemperature: {
-                        Metric: {
-                            Value: ''
-                        }
-                    },
-                    WeatherText: ''
-                }
-            ],
-            hourlyForecast: [
-                {
-                    EpochDateTime: '',
-                    IconPhrase: '',
-                    Temperature: {
-                        Value: ''
-                    },
-                    WeatherIcon: ''
-                }
-            ],
-            dailyForecast: {
-                DailyForecasts: [
-                    {
-                        EpochDate: '',
-                        Temperature: {
-                            Maximum: {
-                                Value: ''
-                            },
-                            Minimum: {
-                                Value: ''
-                            }
-                        },
-                        Day: {
-                            Icon: '',
-                            IconPhrase: ''
-                        },
-                        Night: {
-                            Icon: '',
-                            IconPhrase: ''
-                        }
-                    }
-                ]
-            }
+            // searchJson: [
+            //     {
+            //         AdministrativeArea: {
+            //             countryID: '',
+            //             EnglishName: '',
+            //             ID: ''
+            //         },
+            //         Key: '',
+            //         Type: '',
+            //         Country: {
+            //             EnglishName: '',
+            //             ID: ''
+            //         },
+            //         EnglishName: ''
+            //     }
+            // ],
+            // localWeatherKeyJson: [
+            //     {
+            //         Key: ''
+            //     }
+            // ],
+            // localCurrentWeather: [
+            //     {
+            //         EpochTime: '',
+            //         ApparentTemperature: {
+            //             Metric: {
+            //                 Value: ''
+            //             }
+            //         },
+            //         WeatherIcon: '',
+            //         Temperature: {
+            //             Metric: {
+            //                 Value: ''
+            //             }
+            //         },
+            //         RealFeelTemperature: {
+            //             Metric: {
+            //                 Value: ''
+            //             }
+            //         },
+            //         WeatherText: ''
+            //     }
+            // ],
+            // hourlyForecast: [
+            //     {
+            //         EpochDateTime: '',
+            //         IconPhrase: '',
+            //         Temperature: {
+            //             Value: ''
+            //         },
+            //         WeatherIcon: ''
+            //     }
+            // ],
+            // dailyForecast: {
+            //     DailyForecasts: [
+            //         {
+            //             EpochDate: '',
+            //             Temperature: {
+            //                 Maximum: {
+            //                     Value: ''
+            //                 },
+            //                 Minimum: {
+            //                     Value: ''
+            //                 }
+            //             },
+            //             Day: {
+            //                 Icon: '',
+            //                 IconPhrase: ''
+            //             },
+            //             Night: {
+            //                 Icon: '',
+            //                 IconPhrase: ''
+            //             }
+            //         }
+            //     ]
+            // }
         }
     }
 
@@ -235,12 +235,12 @@ class App extends Component {
     };
 
     componentDidMount() {
-        this.getLocation();
-        /*this.setState({
+        // this.getLocation();
+        this.setState({
             localCurrentWeather: current,
             hourlyForecast: hourly,
             dailyForecast: daily
-        });*/
+        });
     }
 
     render() {
