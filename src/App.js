@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     BrowserRouter as Router,
     Route,
@@ -141,46 +141,46 @@ class App extends Component {
         const google_api_key = 'AIzaSyDkv3JKsB__r75VpVNt5XP-HNzbBDC5anQ';
         if (navigator.geolocation) {
             let success = (position) => {
-                    this.setState({
-                        gotLocation: true
-                    });
-                    const lat = position.coords.latitude;
-                    const lng = position.coords.longitude;
-                    fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${google_api_key}&language=en`,
-                        {method: 'GET'}
-                    )
-                        .then(response => response.json())
-                        .then(json => this.setState({
-                            geoJson: json
-                        }))
-                        .then(() => {
-                            const weather_api_key = 'w1gY3UgnKDweZNE4ZHwtAo3Go9RhUPIQ';
-                            let cityName = this.state.geoJson.results[2].address_components[1].short_name;
-                            fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09${weather_api_key}&q=${cityName}`,
-                                {method: 'GET'}
-                            )
-                                .then(response => response.json())
-                                .then(json => this.setState({localWeatherKeyJson: json}))
-                                .then(() => {
-                                    const weatherKey = this.state.localWeatherKeyJson[0].Key;
-                                    fetch(`https://dataservice.accuweather.com/currentconditions/v1/${weatherKey}?apikey=${weather_api_key}&details=true`,
-                                        {method: 'GET'}
-                                    )
-                                        .then(response => response.json())
-                                        .then(json => this.setState({localCurrentWeather: json}));
-                                    fetch(`https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${weatherKey}?apikey=${weather_api_key}&language=en&metric=true`,
-                                        {method: 'GET'}
-                                    )
-                                        .then(response => response.json())
-                                        .then(json => this.setState({hourlyForecast: json}));
-                                    fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${weatherKey}?apikey=${weather_api_key}&metric=true`,
-                                        {method: 'GET'}
-                                    )
-                                        .then(response => response.json())
-                                        .then(json => this.setState({dailyForecast: json}));
-                                })
-                        })
-                };
+                this.setState({
+                    gotLocation: true
+                });
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+                fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${google_api_key}&language=en`,
+                    {method: 'GET'}
+                )
+                    .then(response => response.json())
+                    .then(json => this.setState({
+                        geoJson: json
+                    }))
+                    .then(() => {
+                        const weather_api_key = 'w1gY3UgnKDweZNE4ZHwtAo3Go9RhUPIQ';
+                        let cityName = this.state.geoJson.results[2].address_components[1].short_name;
+                        fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=%09${weather_api_key}&q=${cityName}`,
+                            {method: 'GET'}
+                        )
+                            .then(response => response.json())
+                            .then(json => this.setState({localWeatherKeyJson: json}))
+                            .then(() => {
+                                const weatherKey = this.state.localWeatherKeyJson[0].Key;
+                                fetch(`https://dataservice.accuweather.com/currentconditions/v1/${weatherKey}?apikey=${weather_api_key}&details=true`,
+                                    {method: 'GET'}
+                                )
+                                    .then(response => response.json())
+                                    .then(json => this.setState({localCurrentWeather: json}));
+                                fetch(`https://dataservice.accuweather.com/forecasts/v1/hourly/12hour/${weatherKey}?apikey=${weather_api_key}&language=en&metric=true`,
+                                    {method: 'GET'}
+                                )
+                                    .then(response => response.json())
+                                    .then(json => this.setState({hourlyForecast: json}));
+                                fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${weatherKey}?apikey=${weather_api_key}&metric=true`,
+                                    {method: 'GET'}
+                                )
+                                    .then(response => response.json())
+                                    .then(json => this.setState({dailyForecast: json}));
+                            })
+                    })
+            };
 
             let error = () => {
                 this.setState({
@@ -188,8 +188,7 @@ class App extends Component {
                 })
             };
             navigator.geolocation.getCurrentPosition(success, error);
-        }
-        else {
+        } else {
             this.setState({
                 gotLocation: false
             })
@@ -205,7 +204,7 @@ class App extends Component {
             )
                 .then(response => response.json())
                 .then(json => {
-                    if(!json.length) {
+                    if (!json.length) {
                         this.setState({gotResults: false})
                     } else {
                         this.setState({
@@ -248,59 +247,67 @@ class App extends Component {
 
         return (
             <Router>
-                <div className="main-wrapper">
-                    <div className="top-wrapper">
-                        <Search
-                            onSearch={this.onSearch.bind(this)}
-                            searchJson={this.state.searchJson}
-                            gotResults={this.state.gotResults}
-                        />
-                        <div className="details">
-                            <Location
-                                cityName={this.state.geoJson.results[2].address_components[1].short_name}
-                                countryID={this.state.geoJson.results[2].address_components[3].short_name}
-                                gotLocation={this.state.gotLocation}
+                <main>
+                    <div className="main-wrapper">
+                        <div className="top-wrapper">
+                            <Search
+                                onSearch={this.onSearch.bind(this)}
+                                searchJson={this.state.searchJson}
+                                gotResults={this.state.gotResults}
                             />
-                            <div className="time">
-                                <LocalTime/>
+                            <div className="details">
+                                <Location
+                                    cityName={this.state.geoJson.results[2].address_components[1].short_name}
+                                    countryID={this.state.geoJson.results[2].address_components[3].short_name}
+                                    gotLocation={this.state.gotLocation}
+                                />
+                                <div className="time">
+                                    <LocalTime/>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <Navigation/>
-                    <Switch>
-                        <Route exact path="/" render={() => <Redirect to="/current-weather"/>}/>
-                        <Route path="/current-weather"
-                               render={() =>
-                                   <CurrentWeather
-                                       dailyForecast={this.state.dailyForecast.DailyForecasts}
-                                       localCurrentWeather={this.state.localCurrentWeather}
-                                       gotLocation={this.state.gotLocation}
-                                       gotResults={this.state.gotResults}
-                                       icon={iconName}
-                                   />}/>
-                        <Route path="/hourly-forecast"
-                               render={() =>
-                                   <HourlyForecast
-                                       hourlyForecast={this.state.hourlyForecast}
-                                       gotLocation={this.state.gotLocation}
-                                       gotResults={this.state.gotResults}
-                                       icon={iconName}
-                                   />}/>
-                        <Route path="/daily-forecast"
-                               render={() =>
-                                   <DailyForecast
-                                       dailyForecast={this.state.dailyForecast.DailyForecasts}
-                                       gotLocation={this.state.gotLocation}
-                                       gotResults={this.state.gotResults}
-                                       icon={iconName}
-                                   />}/>
-                        <Route
-                            render={function () {
-                                return <p>Not Found</p>;
-                            }}
-                        />
-                    </Switch>
-                </div>
+                    <section>
+                        <Navigation/>
+                        <div className="content">
+                        <Switch>
+
+                                <Route exact path="/" render={() => <Redirect to="/current-weather"/>}/>
+                                <Route path="/current-weather"
+                                       render={() =>
+                                           <CurrentWeather
+                                               dailyForecast={this.state.dailyForecast.DailyForecasts}
+                                               localCurrentWeather={this.state.localCurrentWeather}
+                                               gotLocation={this.state.gotLocation}
+                                               gotResults={this.state.gotResults}
+                                               icon={iconName}
+                                           />}/>
+                                <Route path="/hourly-forecast"
+                                       render={() =>
+                                           <HourlyForecast
+                                               hourlyForecast={this.state.hourlyForecast}
+                                               gotLocation={this.state.gotLocation}
+                                               gotResults={this.state.gotResults}
+                                               icon={iconName}
+                                           />}/>
+                                <Route path="/daily-forecast"
+                                       render={() =>
+                                           <DailyForecast
+                                               dailyForecast={this.state.dailyForecast.DailyForecasts}
+                                               gotLocation={this.state.gotLocation}
+                                               gotResults={this.state.gotResults}
+                                               icon={iconName}
+                                           />}/>
+                                <Route
+                                    render={function () {
+                                        return <div className="content">Not Found</div>;
+                                    }}
+                                />
+
+                        </Switch>
+                        </div>
+                    </section>
+                </main>
             </Router>
         );
     }

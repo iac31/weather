@@ -1,51 +1,67 @@
 @import "variables";
 
 body {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  color: $white;
   margin: 0;
   padding: 0;
-  font-family: $font-family-sans-serif;
-  color: $white;
-}
 
-.main-wrapper {
-  background-image: url("../images/budapest.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  //background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
+  main {
+    //height: 100vh;
+    background-image: url("../images/budapest.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: cover;
 
-  .top-wrapper {
-    height: 20vh;
-    //display: flex;
-    //justify-content: space-between;
-    //margin: 0 5%;
+    .main-wrapper {
+      height: 60vh;
 
-    .input-wrapper {
-      //padding-top: 40px;
+      .top-wrapper {
+        padding: 80px 0 0;
+        //height: 20vh;
+        //display: flex;
+        //justify-content: space-between;
+        //margin: 0 5%;
 
-      input {
-        background-color: transparent;
-        border: 0;
-        color: white;
-        font-size: 75px;
+        .input-wrapper {
+          //padding-top: 40px;
 
-        &::placeholder {
-          color: #888888;
+          input {
+            width: 100%;
+            text-align: center;
+            color: $white;
+            background-color: transparent;
+            border: 0;
+            font-size: 4rem;
+
+            &::placeholder {
+              color: #888888;
+            }
+
+            &:focus {
+              outline: none;
+              color: white;
+            }
+          }
         }
 
-        &:focus {
-          outline: none;
-          color: white;
+        .details {
+          //display: none;
+          text-align: right;
+          line-height: 2em;
         }
       }
     }
 
-    .details {
-      display: none;
-      padding-top: 40px;
-      text-align: right;
-      line-height: 2em;
+    section {
+      height: 40vh;
+
+      .content {
+        height: 100%;
+        background-color: rgba(106, 125, 140, 0.7);
+      }
     }
   }
 }
